@@ -1,0 +1,11 @@
+services:
+  agent:
+    container_name: langraph-scaffold
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
+    env_file: ../.env
+    volumes:
+      - ../src:/app/src
+      - ../output:/app/output
+      - ../scripts:/app/scripts

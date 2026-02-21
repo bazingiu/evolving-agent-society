@@ -1,0 +1,11 @@
+{
+    "dependencies": [
+        "."
+    ],
+    "graphs": {
+        "execution_agent": "./src/agents/execution_agent/graph.py:execution_agent_graph",
+        "research_agent": "./src/agents/research_agent/graph.py:research_agent_graph",
+        "main": "./src/main_graph.py:main_graph"
+    },
+    "env": ".env"
+}
