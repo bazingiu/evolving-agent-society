@@ -40,9 +40,13 @@ def main():
         },
     ]
 
-    # Fare che possiamo dargli noi il task in input
+    user_task = input("\nInserisci il task per la simulazione: ")
+    if not user_task.strip():
+        user_task = "Come può un sistema di AI migliorare progressivamente la sua capacità di rispondere a domande complesse?"
+        print(f"Task vuoto. Uso il default: {user_task}")
+
     initial_state = {
-        "task": "Come può un sistema di AI migliorare progressivamente la sua capacità di rispondere a domande complesse?",
+        "task": user_task,
         "agents": _initial_agents,
         "collective_memory": [],
         "current_discovery": "",
@@ -51,7 +55,6 @@ def main():
         "max_cycles": 9,
     }
 
-    # Esegue il grafo invocandolo
     print("Esecuzione nodo iniziale...")
 
     config = {"configurable": {"thread_id": "test_langsmith_1"}}
