@@ -88,8 +88,13 @@ if __name__ == "__main__":
         },
     ]
 
+    user_task = input("\nInserisci il task per la simulazione: ")
+    if not user_task.strip():
+        user_task = "Come può un sistema di AI migliorare progressivamente la sua capacità di rispondere a domande complesse?"
+        print(f"Task vuoto. Uso il default: {user_task}")
+
     _initial_state: GlobalState = {
-        "task": "Come può un sistema di AI migliorare progressivamente la sua capacità di rispondere a domande complesse?",
+        "task": user_task,
         "agents": _initial_agents,
         "collective_memory": [],
         "current_discovery": "",
