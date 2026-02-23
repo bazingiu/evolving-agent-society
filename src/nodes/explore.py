@@ -22,7 +22,8 @@ Il problema che la società deve risolvere è: {state["task"]}
 Ecco la memoria collettiva e le scoperte fatte finora:
 {memory_text}
 
-Produci esattamente UNA singola nuova scoperta o euristica per aiutare a risolvere il problema, che non sia già presente nella memoria collettiva. Sii conciso."""
+Produci esattamente UNA singola nuova scoperta o euristica per aiutare a risolvere il problema, che non sia già presente nella memoria collettiva.
+Sii ultra-conciso."""
 
     response = llm.invoke([HumanMessage(content=prompt)])
     discovery = response.content.strip()
